@@ -4,11 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 try {
-  await mongoose.connect(process.env.MONGODB_URI, {
-    //dbName: "share_prompt",
-    useNewURLParser: true,
-    useUnifiedTopology: true,
-  });
+  await mongoose.connect(process.env.MONGODB_URI);
 
   console.log("MongoDB connected");
 } catch (error) {
