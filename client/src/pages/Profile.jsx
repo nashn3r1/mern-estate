@@ -43,7 +43,7 @@ function Profile() {
         <img
           onClick={() => fileRef.current.click()}
           className="rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2"
-          src={currentUser.avatar}
+          src={file ? URL.createObjectURL(file) : currentUser.avatar}
           alt="profile"
         />
         <input
