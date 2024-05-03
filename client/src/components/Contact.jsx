@@ -11,7 +11,7 @@ function Contact({ listing }) {
   useEffect(() => {
     const fetchLandlord = async () => {
       try {
-        const res = await fetch(`/api/user/${listing.useRef}`);
+        const res = await fetch(`/api/user/${listing.userRef}`);
         const data = await res.json();
         setLandlord(data);
       } catch (error) {
@@ -19,7 +19,7 @@ function Contact({ listing }) {
       }
     };
     fetchLandlord();
-  }, [listing.useRef]);
+  }, [listing.userRef]);
 
   return (
     <>
